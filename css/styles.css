@@ -1,0 +1,39 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  font-size: 10px;
+  --color-white: #ffffff;
+}
+
+.navbar {
+  position: fixed;
+  display: flex;
+  justify-content: space-between;
+  background-color: #6f6af7;
+  width: 100vw;
+  padding: 10px;
+  align-items: center;
+}
+
+.navbar > div {
+  margin-left: 3vw;
+  font-size: 4rem;
+  color: var(--color-white);
+}
+
+.navbar > ul {
+  list-style: none;
+  display: flex;
+  column-gap: 8vw;
+  margin: auto 6vw;
+  font-size: 1.7rem;
+  color: var(--color-white);
+}
+
+.navbar > ul > li > a {
+  text-decoration: none;
+  color: var(--color-white);
+}
