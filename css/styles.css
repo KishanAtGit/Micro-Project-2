@@ -41,6 +41,7 @@ body {
 }
 
 .navbar > div:nth-child(3) {
+  margin-top: 1vh;
   margin-right: 5vw;
   font-size: 2em;
   color: var(--color-white);
@@ -56,6 +57,10 @@ body {
   color: var(--color-white);
 }
 
+.navbar > ul > li:nth-child(5) {
+  position: relative;
+}
+
 #searchbutton1 {
   width: 13vw;
   height: 3vh;
@@ -64,13 +69,43 @@ body {
   padding: 9px;
 }
 
+#search-icon {
+  position: absolute;
+  bottom: 1vh;
+  right: 1vw;
+  width: 1vw;
+  height: 3vh;
+}
+
 #searchbutton1::placeholder {
   font-size: 0.9em;
+  color: #9f9f9f;
 }
 
 .navbar > ul > li > a {
   text-decoration: none;
   color: var(--color-white);
+}
+
+#optionbutton1 {
+  height: 4vh;
+  width: 2vw;
+}
+
+#share-icons > a > img {
+  position: fixed;
+  justify-content: right;
+  top: 32vh;
+  right: 1vw;
+  width: 3.2vw;
+}
+
+#help-icon {
+  position: fixed;
+  justify-content: right;
+  bottom: 4vh;
+  right: 8vw;
+  width: 8vw;
 }
 
 .container1 {
@@ -147,10 +182,10 @@ body {
 .left-space > div > button {
   width: 16vw;
   height: 11vh;
-  border: 1px solid wheat;
+  border: 1px solid white;
   border-radius: 10px;
   background: unset;
-  color: wheat;
+  color: white;
   font-weight: 700;
   font-size: 2em;
 }
@@ -167,6 +202,7 @@ body {
   display: flex;
   flex-direction: column;
   background-color: white;
+  color: #04285a;
   margin: 6vh 4vw;
   padding: 20px;
   border-radius: 10px;
@@ -186,15 +222,33 @@ body {
 
 .right-space > form > div {
   font-size: 1.8em;
-  font-family: Inter;
+  font-family: Roboto;
 }
 
 .right-space > form > div:not(:first-child) {
   margin: 5vh 2vw;
 }
 
-.right-space > form > div > label > span {
-  margin-left: 2vw;
+.right-space > form > div:nth-child(2) > label > span {
+  margin-left: 35px;
+}
+.right-space > form > div:nth-child(3) > label > span {
+  margin-left: 38px;
+}
+.right-space > form > div:nth-child(4) > label > span {
+  margin-left: 32px;
+}
+.right-space > form > div:nth-child(5) > label > span {
+  margin-left: 33px;
+}
+
+.right-space > form > div > input {
+  height: 4vh;
+  padding: 4px;
+  margin-left: 3vw;
+  color: #143565;
+  font-weight: 400;
+  border: none;
 }
 
 @media screen and (max-width: 820px) {
@@ -211,6 +265,15 @@ body {
   .container1 > div > textarea {
     height: 56vh;
   }
+  .left-space > div > button {
+    font-size: 1.5em;
+  }
+  .right-space > form > div:nth-child(1) {
+    font-size: 2.3em;
+  }
+  .right-space > form > div {
+    font-size: 1.3em;
+  }
 }
 @media screen and (max-width: 770px) {
   .navbar > div:nth-child(1) {
@@ -220,12 +283,24 @@ body {
   .navbar > div:nth-child(3) {
     font-size: 1em;
   }
+  #searchbutton1::placeholder {
+    font-size: 0.6em;
+  }
   .container1 > div > textarea,
   .container2 > .items > textarea {
     font-size: 1.3em;
   }
   .container2 {
-    gap: 11.5vw;
+    gap: 9vw;
+  }
+  .left-space > div > button {
+    font-size: 1.2em;
+  }
+  .right-space > form > div:nth-child(1) {
+    font-size: 1.8em;
+  }
+  .right-space > form > div {
+    font-size: 0.8em;
   }
 }
 @media screen and (max-width: 670px) {
@@ -243,12 +318,24 @@ body {
   .navbar > div:nth-child(3) {
     margin-right: 7vw;
   }
+  #searchbutton1::placeholder {
+    font-size: 0.4em;
+  }
   .container1 > div > textarea,
   .container2 > .items > textarea {
     font-size: 0.8em;
   }
   .container2 {
-    gap: 10vw;
+    gap: 7vw;
+  }
+  .left-space > div > button {
+    font-size: 0.8em;
+  }
+  .right-space > form > div:nth-child(1) {
+    font-size: 1.3em;
+  }
+  .right-space > form > div {
+    font-size: 0.9em;
   }
 }
 @media screen and (max-width: 440px) {
@@ -264,6 +351,113 @@ body {
     font-size: 0.6em;
   }
   .container2 {
-    gap: 8.5vw;
+    gap: 5vw;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .navbar {
+    height: 5vh;
+    align-items: unset;
+  }
+  #searchbutton1::placeholder {
+    font-size: 0.3em;
+  }
+  #searchbutton1 {
+    width: 12vw;
+    height: 0vh;
+  }
+  #search-icon {
+    position: absolute;
+    bottom: -3vh;
+    right: 2vw;
+    width: 2vw;
+    height: 2vh;
+  }
+  .navbar > ul {
+    margin-left: -2vw;
+    margin-right: 5.5vw;
+  }
+  .navbar > div:nth-child(3) {
+    margin-right: 7vw;
+  }
+  .container1 {
+    margin: 18vh 5vw 4vh 5vw;
+    gap: 4vw;
+  }
+  .container1 > div > img {
+    height: 16vh;
+    width: 27vw;
+  }
+  .container1 > div > textarea {
+    height: 6vh;
+    width: 54vw;
+  }
+  .container1 > div > textarea,
+  .container2 > .items > textarea {
+    font-size: 0.6em;
+  }
+  #share-icons > a > img {
+    top: 19vh;
+    width: 3.5vw;
+  }
+  #help-icon {
+    bottom: 63vh;
+    width: 6vw;
+  }
+  .container2 {
+    gap: 4vw;
+  }
+  .container2 > .items > textarea {
+    height: 2vh;
+  }
+  .container3 {
+    margin: 5vh 5vw;
+  }
+  .left-space {
+    gap: 5vh;
+    margin: 0 2vw;
+  }
+  .left-space > div > button {
+    width: 18vw;
+    height: 3vh;
+  }
+  .right-space {
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    color: #04285a;
+    margin: 2vh 4vw;
+    padding: 20px;
+    border-radius: 10px;
+    width: 48vw;
+    height: 22vh;
+  }
+  .right-space > form {
+    margin: 2vh 2vw;
+  }
+  .right-space > form > div:not(:first-child) {
+    margin: 1vh 1vw;
+  }
+  .right-space > form > div:nth-child(2) > label > span {
+    margin-left: 12px;
+  }
+  .right-space > form > div:nth-child(3) > label > span {
+    margin-left: 13px;
+  }
+  .right-space > form > div:nth-child(4) > label > span {
+    margin-left: 11px;
+  }
+  .right-space > form > div:nth-child(5) > label > span {
+    margin-left: 11px;
+  }
+  .right-space > form > div > input {
+    height: 3vh;
+    padding: 0px;
+    margin-left: 3vw;
+    color: #143565;
+    font-weight: 400;
+    border: none;
+    font-size: 0.9em;
   }
 }
