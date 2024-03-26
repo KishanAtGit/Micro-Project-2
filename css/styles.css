@@ -92,10 +92,25 @@ body {
   width: 2vw;
 }
 
-#share-icons > a > img {
+#share-icons > a:nth-child(1) > img {
   position: fixed;
   justify-content: right;
   top: 32vh;
+  right: 1vw;
+  width: 3.2vw;
+}
+#share-icons > a:nth-child(2) > img {
+  position: fixed;
+  justify-content: right;
+  top: 41vh;
+  right: 1vw;
+  width: 3.2vw;
+}
+
+#share-icons > a:nth-child(3) > img {
+  position: fixed;
+  justify-content: right;
+  top: 50vh;
   right: 1vw;
   width: 3.2vw;
 }
