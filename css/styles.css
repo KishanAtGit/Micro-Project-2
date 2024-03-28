@@ -1,12 +1,12 @@
 body {
   margin: 0;
   padding: 0;
+  /* font-family: "DM Sans"; */
 }
 
 :root {
   font-size: 10px;
   --color-white: #ffffff;
-  font-family: cursive;
 }
 
 .delius-unicase-regular {
@@ -36,7 +36,7 @@ body {
 .navbar > div:nth-child(1) {
   margin-left: 3vw;
   font-size: 4em;
-  /* font-family: cursive; */
+  font-family: cursive;
   color: var(--color-white);
 }
 
@@ -47,6 +47,16 @@ body {
   color: var(--color-white);
 }
 
+.arrow-down {
+  border: 1px solid white;
+  margin: 2px 4px;
+  border-width: 0 3px 3px 0;
+  display: inline-block;
+  padding: 3px;
+  transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+}
+
 .navbar > ul {
   list-style: none;
   display: flex;
@@ -54,6 +64,7 @@ body {
   margin-left: 3vw;
   margin-right: 3vw;
   font-size: 1.7em;
+  font-family: "DM Sans";
   color: var(--color-white);
 }
 
@@ -62,24 +73,28 @@ body {
 }
 
 #searchbutton1 {
-  width: 13vw;
+  position: relative;
+  width: 15vw;
   height: 3vh;
   border: none;
-  border-radius: 9px;
+  border-radius: 15px;
   padding: 9px;
 }
 
 #search-icon {
   position: absolute;
-  bottom: 1vh;
-  right: 1vw;
-  width: 1vw;
-  height: 3vh;
+  bottom: 22%;
+  width: 10%;
+  height: 50%;
+  right: 2vw;
+  align-self: center;
 }
 
 #searchbutton1::placeholder {
-  font-size: 0.9em;
+  font-size: 1.2em;
   color: #9f9f9f;
+  text-align: center left;
+  font-family: "DM Sans";
 }
 
 .navbar > ul > li > a {
@@ -92,26 +107,19 @@ body {
   width: 2vw;
 }
 
-#share-icons > a:nth-child(1) > img {
+#share-icons {
   position: fixed;
-  justify-content: right;
+  display: flex;
+  flex-direction: column;
+  column-gap: 1vh;
   top: 32vh;
-  right: 1vw;
-  width: 3.2vw;
-}
-#share-icons > a:nth-child(2) > img {
-  position: fixed;
+  right: -1vw;
   justify-content: right;
-  top: 41vh;
-  right: 1vw;
-  width: 3.2vw;
+  float: right;
+  margin-right: 2vw;
 }
 
-#share-icons > a:nth-child(3) > img {
-  position: fixed;
-  justify-content: right;
-  top: 50vh;
-  right: 1vw;
+#share-icons > a > img {
   width: 3.2vw;
 }
 
@@ -132,6 +140,8 @@ body {
 .container1 > div > img {
   height: 77vh;
   width: 24vw;
+  border-radius: 18px;
+  box-shadow: 3px 4px 15px 3px #00000070;
 }
 
 .container1 > div > textarea {
@@ -142,39 +152,43 @@ body {
   border-radius: 15px;
   padding: 5vh 2vw;
   color: #6f7373;
-  font-size: 1.8em;
+  font-size: 2em;
+  font-family: "DM Sans";
+
   resize: none;
 }
 
 .container2 {
   display: flex;
-  gap: 8.6vw;
+  gap: 14vw;
   margin: 2vh 4vw;
 }
 
-.container2 > .items > textarea {
+.container2 > .items {
   resize: none;
   overflow: hidden;
-  padding: 10px;
-  height: 12vh;
-  width: 15vw;
+  padding: 15px;
+  height: 8vh;
+  width: 12vw;
   font-size: 1.8em;
+  font-family: "DM Sans";
   font-weight: 700;
   border: none;
   border-radius: 5px;
   color: white;
+  box-shadow: 3px 4px 15px 3px #00000070;
 }
 
-.container2 > .items:nth-child(1) > textarea {
+.container2 > .items:nth-child(1) {
   background-color: #929dff;
 }
-.container2 > .items:nth-child(2) > textarea {
+.container2 > .items:nth-child(2) {
   background-color: #734cf2;
 }
-.container2 > .items:nth-child(3) > textarea {
+.container2 > .items:nth-child(3) {
   background-color: #d288ff;
 }
-.container2 > .items:nth-child(4) > textarea {
+.container2 > .items:nth-child(4) {
   background-color: #000000;
 }
 
@@ -204,6 +218,7 @@ body {
   color: white;
   font-weight: 700;
   font-size: 2em;
+  font-family: "DM Sans";
 }
 
 .left-space > div > button:hover {
@@ -233,7 +248,7 @@ body {
 
 .right-space > form > div:nth-child(1) {
   font-size: 2.8em;
-  font-family: sans-serif;
+  font-family: Inter;
   font-weight: 700;
 }
 
@@ -265,7 +280,9 @@ body {
   margin-left: 3vw;
   color: #143565;
   font-weight: 400;
+  font-size: 1.8rem;
   border: none;
+  pointer-events: none;
 }
 
 #next-button {
@@ -279,7 +296,7 @@ body {
   font-size: 1.5em;
 }
 
-@media screen and (max-width: 820px) {
+@media screen and (max-width: 870px) {
   .navbar > div:nth-child(1) {
     font-size: 2.5em;
   }
@@ -293,6 +310,9 @@ body {
   .container1 > div > textarea {
     height: 56vh;
   }
+  .container2 > .items {
+    font-size: 1.5em;
+  }
   .left-space > div > button {
     font-size: 1.5em;
   }
@@ -301,6 +321,9 @@ body {
   }
   .right-space > form > div {
     font-size: 1.3em;
+  }
+  .right-space > form > div > input {
+    font-size: 1.3rem;
   }
 }
 @media screen and (max-width: 770px) {
@@ -315,7 +338,7 @@ body {
     font-size: 0.6em;
   }
   .container1 > div > textarea,
-  .container2 > .items > textarea {
+  .container2 > .items {
     font-size: 1.3em;
   }
   .container2 {
@@ -329,6 +352,9 @@ body {
   }
   .right-space > form > div {
     font-size: 0.8em;
+  }
+  .right-space > form > div > input {
+    font-size: 0.8rem;
   }
 }
 @media screen and (max-width: 670px) {
@@ -350,7 +376,7 @@ body {
     font-size: 0.4em;
   }
   .container1 > div > textarea,
-  .container2 > .items > textarea {
+  .container2 > .items {
     font-size: 0.8em;
   }
   .container2 {
@@ -363,7 +389,10 @@ body {
     font-size: 1.3em;
   }
   .right-space > form > div {
-    font-size: 0.9em;
+    font-size: 0.6em;
+  }
+  .right-space > form > div > input {
+    font-size: 0.6rem;
   }
 }
 @media screen and (max-width: 440px) {
@@ -375,7 +404,7 @@ body {
     margin-right: 7vw;
   }
   .container1 > div > textarea,
-  .container2 > .items > textarea {
+  .container2 > .items {
     font-size: 0.6em;
   }
   .container2 {
@@ -422,8 +451,11 @@ body {
     width: 54vw;
   }
   .container1 > div > textarea,
-  .container2 > .items > textarea {
+  .container2 > .items {
     font-size: 0.6em;
+  }
+  .container2 > .items {
+    height: 2vh;
   }
   #share-icons > a > img {
     top: 19vh;
@@ -435,9 +467,6 @@ body {
   }
   .container2 {
     gap: 4vw;
-  }
-  .container2 > .items > textarea {
-    height: 2vh;
   }
   .container3 {
     margin: 5vh 5vw;
@@ -486,6 +515,6 @@ body {
     color: #143565;
     font-weight: 400;
     border: none;
-    font-size: 0.9em;
+    font-size: 0.5rem;
   }
 }

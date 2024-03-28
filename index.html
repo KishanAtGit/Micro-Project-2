@@ -20,6 +20,16 @@
       rel="stylesheet"
     />
     <title>desktop</title>
+    <script>
+      window.addEventListener("scroll", function () {
+        var icon = document.getElementById("share-icons");
+        if (window.scrollY > 100) {
+          icon.style.top = "17vh";
+        } else {
+          icon.style.top = "32vh";
+        }
+      });
+    </script>
   </head>
   <body>
     <nav class="navbar">
@@ -28,9 +38,9 @@
         <li><a href="#">Home</a></li>
         <li><a href="#">About Us</a></li>
         <li><a href="#">Information</a></li>
-        <li><a href="#">More</a></li>
+        <li><a href="#">More</a><i class="arrow-down"></i></li>
         <li>
-          <input id="searchbutton1" type="text" placeholder="Search.." />
+          <input id="searchbutton1" type="text" placeholder="Search...." />
           <a href="#">
             <img src="./img/search-icon.png" alt="search-icon" id="search-icon"
           /></a>
@@ -62,31 +72,21 @@ It's not only writers who can benefit from this free online tool. If you're a pr
     </div>
     <div class="container2">
       <div class="items">
-        <textarea readonly>
-Total Question's
-200,000
-        </textarea>
+        <div>Total Question's</div>
+        <div></div>
+        <div>200,000</div>
       </div>
       <div class="items">
-        <textarea readonly>
-Total Answer's
-105,000
-                </textarea
-        >
+        <div>Total Answer's</div>
+        <div>105,000</div>
       </div>
       <div class="items">
-        <textarea readonly>
-Participated
-10,000
-                </textarea
-        >
+        <div>Participated</div>
+        <div>10,000</div>
       </div>
       <div class="items">
-        <textarea readonly>
-Total Passed
-6,000
-                </textarea
-        >
+        <div>Total Passed</div>
+        <div>6,000</div>
       </div>
     </div>
     <div class="container3">
